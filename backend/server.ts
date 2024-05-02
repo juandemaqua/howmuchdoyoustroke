@@ -3,6 +3,7 @@ import express, { Express } from "express";
 import cors from "cors";
 import { WeatherResponse } from "@full-stack/types";
 import fetch from "node-fetch";
+import { db } from "./firebase";
 
 const app: Express = express();
 
@@ -23,6 +24,20 @@ type WeatherData = {
         precipitation: number;
     };
 };
+
+app.get('/get-everything', async (req, res) => {
+    console.log("GET /api/get-everything was called");
+    const usersCollection = db.collection("Users");
+    const doc = await usersCollection.get();
+    
+    const allOurShit: Record<string, any> = {};
+    doc.forEach((d) => {
+        console.log('d: ', d.id, d.data());
+        allOurShit[d.id] = d.data();
+    })
+
+    res.json(allOurShit);
+});
 
 app.get("/weather", async (req, res) => {
     console.log("GET /api/weather was called");
