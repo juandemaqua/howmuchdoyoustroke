@@ -1,6 +1,5 @@
 // Game.tsx
 import React, { useState, useEffect } from 'react';
-import Scoreboard from '../components/Scoreboard';
 
 type Score = {
   username: string;
