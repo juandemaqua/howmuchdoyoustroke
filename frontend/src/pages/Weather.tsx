@@ -4,7 +4,7 @@ import { coinflip } from "@full-stack/common";
 import { BACKEND_BASE_PATH } from "../constants/Navigation";
 
 const getShit = (): Promise<any> =>
-    fetch(`${BACKEND_BASE_PATH}/get-everything`).then(async (res) => {
+    fetch(`${BACKEND_BASE_PATH}/create-user`).then(async(res) => {
         const jsonRes = await res.json();
         console.log("Retrieved", jsonRes);
         return jsonRes;

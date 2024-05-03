@@ -8,6 +8,6 @@ const app = initializeApp({
     credential: cert(leServiceAcct)
 });
 
-const db = getFirestore();
+const db = getFirestore(app);
 
 export { db };

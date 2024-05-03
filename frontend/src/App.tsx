@@ -1,9 +1,10 @@
-import { MantineProvider } from "@mantine/core";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ErrorPage from "./pages/Error";
-import RootLayout from "./layouts/RootLayout";
-import { PATHS } from "./constants/Navigation";
-import "./index.css";
+// App.tsx
+import { MantineProvider } from '@mantine/core';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ErrorPage from './pages/Error';
+import RootLayout from './layouts/RootLayout';
+import { PATHS } from './constants/Navigation';
+import './index.css';
 
 const router = createBrowserRouter([
     {

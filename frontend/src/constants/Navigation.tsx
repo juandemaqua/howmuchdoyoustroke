@@ -3,7 +3,7 @@ import Counter from "../pages/Counter";
 import HomePage from "../pages/Home";
 import Game from "../pages/Game";
 import ScoreboardPage from "../pages/Score";
-
+import CreateAccount from "../pages/CreateAccount";
 /**
  * TODO: 
  * When developing locally (on your computer) this should be http://localhost:8080
@@ -50,5 +50,10 @@ export const PATHS: {
         link: "/score",
         label: "Score",
         element: <ScoreboardPage />,
+    },
+    {
+        link: "/createaccount",
+        label: "Sign-in",
+        element: <CreateAccount />,
     },
 ];
