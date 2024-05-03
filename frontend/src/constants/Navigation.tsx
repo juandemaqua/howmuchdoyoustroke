@@ -4,8 +4,11 @@ import HomePage from "../pages/Home";
 import Game from "../pages/Game";
 import ScoreboardPage from "../pages/Score";
 import CreateAccount from "../pages/CreateAccount";
+<<<<<<< Updated upstream
 import Login from "../pages/Login";
 
+=======
+>>>>>>> Stashed changes
 
 /**
  * TODO: 

@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import { BACKEND_BASE_PATH } from '../constants/Navigation'; // Ensure correct path
 
+
 const createAccount = (username: string, email: string, password: string): Promise<any> => {
   return fetch(`${BACKEND_BASE_PATH}/create-account`, {
     method: 'POST',
@@ -34,27 +35,28 @@ const CreateAccount = () => {
   };
 
   return (
-    <div>
-      <h2>Create Account</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
-          <input type="text" ref={usernameRef} />
-        </div>
+    <body className='body'>
+      <div>
+        <h1>What The Strokes?</h1>
+          <div className='account-div'>
+            <form onSubmit={handleSubmit}>
+              <div className='input-div'>
+                <input type="text" ref={usernameRef} placeholder='Username'/>
+              </div>
 
-        <div>
-          <label>Email:</label>
-          <input type="email" ref={emailRef} />
-        </div>
+              <div className='input-div'>
+                <input type="email" ref={emailRef} placeholder='Email'/>
+              </div>
 
-        <div>
-          <label>Password:</label>
-          <input type="password" ref={passwordRef} />
-        </div>
+              <div className='input-div'>
+                <input type="password" ref={passwordRef} placeholder='Password'/>
+              </div>
 
-        <button type="submit">Create Account</button>
-      </form>
-    </div>
+              <button type="submit">Create Account</button>
+            </form>
+          </div>
+      </div>
+    </body>
   );
 };
 
