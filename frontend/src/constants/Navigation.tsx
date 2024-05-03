@@ -4,6 +4,9 @@ import HomePage from "../pages/Home";
 import Game from "../pages/Game";
 import ScoreboardPage from "../pages/Score";
 import CreateAccount from "../pages/CreateAccount";
+import Login from "../pages/Login";
+
+
 /**
  * TODO: 
  * When developing locally (on your computer) this should be http://localhost:8080
@@ -53,7 +56,12 @@ export const PATHS: {
     },
     {
         link: "/createaccount",
-        label: "Sign-in",
+        label: "Sign-up",
         element: <CreateAccount />,
+    },
+    {
+        link: "/login",
+        label: "Sign-in",
+        element: <Login />,
     },
 ];
