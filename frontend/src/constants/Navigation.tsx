@@ -34,16 +34,16 @@ export const PATHS: {
         label: "Home",
         element: <HomePage />,
     },
-    {
-        link: "/weather",
-        label: "Weather",
-        element: <Weather />,
-    },
-    {
-        link: "/counter",
-        label: "Counter",
-        element: <Counter />,
-    },
+    // {
+    //     link: "/weather",
+    //     label: "Weather",
+    //     element: <Weather />,
+    // },
+    // {
+    //     link: "/counter",
+    //     label: "Counter",
+    //     element: <Counter />,
+    // },
     {
         link: "/game",
         label: "Game",
