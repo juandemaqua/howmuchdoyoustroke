@@ -1,6 +1,6 @@
 // Login.js or Login.tsx
 
-import React, { useState } from 'react';
+import  { useState, FormEvent } from 'react';
 import { BACKEND_BASE_PATH } from '../constants/Navigation'; // Make sure this path is correct
 
 const login = (username: string, password: string): Promise<any> => {
@@ -30,18 +30,18 @@ const login = (username: string, password: string): Promise<any> => {
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
+    // const [errorMessage, setErrorMessage] = useState('');
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         try {
-            const response = await login(username, password);
+            await login(username, password);
             // Redirect user or do something with the login data
             console.log('User logged in with ID:', localStorage.getItem('userId'));
             // Redirect or update UI here
         } catch (error) {
-            setErrorMessage(error.message);
+            // setErrorMessage(error.message);
         }
     };
 
@@ -57,7 +57,7 @@ const Login = () => {
                     <label>Password:</label>
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </div>
-                {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+                {/* {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>} */}
                 <button type="submit">Log In</button>
             </form>
         </div>

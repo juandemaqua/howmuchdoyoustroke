@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { WeatherResponse } from "@full-stack/types";
-import { coinflip } from "@full-stack/common";
-import { Input, CloseButton } from '@mantine/core';
+// import { WeatherResponse } from "@full-stack/types";
+// import { coinflip } from "@full-stack/common";
+// import { Input, CloseButton } from '@mantine/core';
 import { Autocomplete } from '@mantine/core';
 import { BACKEND_BASE_PATH } from "../constants/Navigation";
 

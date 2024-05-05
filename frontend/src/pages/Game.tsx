@@ -1,13 +1,15 @@
 // Game.tsx
 import React, { useState, useEffect } from 'react';
 
-type Score = {
-  username: string;
-  highestScore: number;
-};
+
+
+// type Score = {
+//   username: string;
+//   highestScore: number;
+// };
 
 const Game: React.FC = () => {
-  const [scores, setScores] = useState<Score[]>([]);
+  // const [scores, setScores] = useState<Score[]>([]);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [audioFiles] = useState([
     "audio/clip1.mp3",
@@ -44,12 +46,12 @@ const Game: React.FC = () => {
       alert("Correct!");
 
       // Update the scoreboard by adding a new score entry
-      setScores((prevScores) => [
-        ...prevScores,
-        { username: "Player", highestScore: 1 }, // Change to logic based on user's identity and performance
-      ]);
-    } else {
-      alert("Incorrect!");
+    //   setScores((prevScores) => [
+    //     ...prevScores,
+    //     { username: "Player", highestScore: 1 }, // Change to logic based on user's identity and performance
+    //   ]);
+    // } else {
+    //   alert("Incorrect!");
     }
 
     handleNextTrack();
